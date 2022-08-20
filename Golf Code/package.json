@@ -1,0 +1,12 @@
+{
+  "name": "golf-code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon Golf-Code.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
