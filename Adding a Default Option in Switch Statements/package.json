@@ -1,0 +1,12 @@
+{
+  "name": "adding-a-default-option-in-switch-statements",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Adding-a-Default-Option-in-Switch-Statements.js",
+  "scripts": {
+    "dev": "nodemon Adding-a-Default-Option-in-Switch-Statements.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
