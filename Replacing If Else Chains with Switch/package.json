@@ -1,0 +1,12 @@
+{
+  "name": "replacing-if-else-chains-with-switch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Replacing-If-Else-Chains-with-Switch.js",
+  "scripts": {
+    "dev": "nodemon Replacing-If-Else-Chains-with-Switch.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
