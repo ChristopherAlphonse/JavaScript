@@ -1,4 +1,4 @@
-function isLess(a: number, b: number): boolean {
+function isLess(a, b) {
   return a === b;
 }
 

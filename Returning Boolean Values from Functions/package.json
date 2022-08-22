@@ -4,7 +4,7 @@
   "description": "",
   "main": "Returning-Boolean-Values-from-Functions.js",
   "scripts": {
-    "dev": "nodemon Returning-Boolean-Values-from-Functions.ts"
+    "dev": "nodemon Returning-Boolean-Values-from-Functions.js"
   },
   "keywords": [],
   "author": "",
