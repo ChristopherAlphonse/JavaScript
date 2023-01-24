@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon test.js"
+    "dev": "nodemon test.performance.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
