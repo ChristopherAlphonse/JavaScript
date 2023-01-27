@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon test.performance.js"
+    "dev": "nodemon LinearTime.js"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

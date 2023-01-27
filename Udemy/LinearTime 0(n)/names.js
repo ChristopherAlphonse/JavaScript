@@ -1,4 +1,4 @@
-const names = [
+export const names = [
   "Aaran",
   "Aaren",
   "Aarez",
@@ -2738,7 +2738,3 @@ const names = [
   "Zubayr",
   "Zuriel",
 ];
-
-module.exports = {
-  names: names,
-};

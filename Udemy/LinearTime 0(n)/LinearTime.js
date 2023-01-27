@@ -1,23 +1,19 @@
-const { names } = require("./names");
-// const name = ["c", "chris", "ch", "chr", "chri"];
-
-// const newArray = new Array(10).fill(`${names}`);
-// console.log(newArray);
+import { names } from "./names.js";
 
 const findCar = (arr) => {
   let start = performance.now();
   for (let i = 0; i < arr.length; i++) {
-    console.log("run");
-    if (arr[i] === "Chris") {
-      console.log(`found ${arr[i]}`);
+    if (arr[i] === `${input}`) {
+      console.log(`Found user name ${input}`);
       break;
     }
   }
   let end = performance.now();
 
   const result = end - start;
-  const g = Math.floor(result);
-  console.log(`Total Time: ${g}00 ms`);
+  const g = Math.round(result);
+  console.log(`It Took ${g}ms to find ${input}`);
 };
 
+let input = "Chris";
 findCar(names); // linear Time o(n): n represent number of operation inputted
