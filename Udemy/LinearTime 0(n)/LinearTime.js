@@ -17,3 +17,4 @@ const findCar = (arr) => {
 
 let input = "Chris";
 findCar(names); // linear Time o(n): n represent number of operation inputted
+// worst case, user name input is at the very end.
