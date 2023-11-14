@@ -57,3 +57,15 @@ It's crucial to consider both time complexity and space complexity when analyzin
   - When space is explicitly declared, as in `let x = 0;`, it is _**Constant space O(1)**_ because the amount of space required is fixed.
 
 Space complexity analysis is crucial for understanding memory usage as input sizes increase.
+
+## Algorithmic Complexity
+
+| Notation   | Description       | Example                                          |
+| ---------- | ----------------- | ------------------------------------------------ |
+| O(1)       | Constant time     | Accessing an element in an array by index        |
+| O(log n)   | Logarithmic time  | Binary search in a sorted array                  |
+| O(n)       | Linear time       | Finding the maximum element in an unsorted array |
+| O(n log n) | Linearithmic time | Merge sort, heap sort                            |
+| O(n^2)     | Quadratic time    | Bubble sort, insertion sort                      |
+| O(2^n)     | Exponential time  | Recursive solutions with branching               |
+| O(n!)      | Factorial time    | Permutations of a set                            |
