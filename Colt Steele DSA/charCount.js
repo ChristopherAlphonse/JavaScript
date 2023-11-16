@@ -38,3 +38,8 @@ function charCount(str) {
 }
 
 console.log(charCount('H6456546e^&*llo Wor^*l^%^&%&%(d! $^&**)*()'));
+
+/*  
+Time: O(n)
+Space: O(n)
+*/

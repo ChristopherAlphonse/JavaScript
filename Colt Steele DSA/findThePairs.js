@@ -10,3 +10,8 @@ function printAllPairs(n) {
 }
 
 print(printAllPairs(5));
+
+/*
+Time: 0(n)
+Space: 0(1) because the function doesn't use any data structures or variables whose space requirements increase with the size of the input
+*/
