@@ -1,7 +1,5 @@
 # Big O notation
 
-## Big O Definition
-
 Topics:
 
 1. [Arrays](./Topics/arrays.md)
