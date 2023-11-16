@@ -2,6 +2,13 @@
 
 ## Big O Definition
 
+Topics:
+
+1. [Arrays](./Topics/arrays.md)
+2. [Objects](./Topics/objects.md)
+3. [Problem Solving](./Topics/problem%20solving.md)
+4. [Algo Patterns](./Topics/patterns.md)
+
 We say that an algorithm is **O(fn(n))** if, for sufficiently large values of **n**, the number of simple operations the computer has to perform is bounded above by a constant times **fn(n)**.
 
 - **fn(n)** could be linear if it's a constant multiple of **n** (e.g., **fn(n) = n**).
