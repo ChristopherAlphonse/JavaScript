@@ -74,11 +74,11 @@ Space complexity analysis is crucial for understanding memory usage as input siz
 
 **O(1)**
 
-````js
+```js
 function add(num1, num2, num3) {
-   return num1 + num2 + num3;
-}```
-````
+	return num1 + num2 + num3;
+}
+```
 
 ```js
 function sayHello() {

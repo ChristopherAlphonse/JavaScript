@@ -25,7 +25,19 @@ C. Break it down:
 D. Solve/Simplify:
 
 - This is where the actual problem-solving takes place. You work on solving the smaller parts or simplifying the problem to make it more manageable. Make sure to apply appropriate techniques or algorithms at this stage.
+  - Find the core difficulty in what your're trying to do.
+  - Temporarily ignore that difficulty.
+  - Write a simplified solution.
+  - Then incorporate that difficulty back in.
 
 E. Look back and refactor:
 
 - Reflecting on your solution is crucial. This step allows you to review your approach, identify potential improvements, and optimize your solution. Refactoring is especially important for code-based problem-solving.
+
+  - Can you check the result?
+  - Can you derive the result differently?
+  - Can you understand it at a glance?
+  - Can you use the result or method for some other problem?
+  - Can you improve the performance of your solution?
+  - Can you think of other ways to refactor?
+  - How have other people solved this problem?
