@@ -69,3 +69,111 @@ Space complexity analysis is crucial for understanding memory usage as input siz
 | O(n^2)     | Quadratic time    | Bubble sort, insertion sort                      |
 | O(2^n)     | Exponential time  | Recursive solutions with branching               |
 | O(n!)      | Factorial time    | Permutations of a set                            |
+
+## Examples Big O Runtime
+
+**O(1)**
+
+````js
+function add(num1, num2, num3) {
+   return num1 + num2 + num3;
+}```
+````
+
+```js
+function sayHello() {
+	for (let i = 0; i < 100; i++) {
+		console.log('Hello');
+	}
+}
+```
+
+```js
+function logMultiples(num) {
+	for (let i = 0; i < 10; i++) {
+		console.log(i * num);
+	}
+}
+```
+
+**O(n)**
+
+```js
+function sayHello(numberOfTimes) {
+	for (let i = 0; i < numberOfTimes; i++) {
+		console.log('Hello');
+	}
+}
+```
+
+```js
+function doubleThenTriple(numbers) {
+	let doubled = numbers.map(function (num) {
+		return num * 2;
+	});
+
+	return doubled.map(function (num) {
+		return num * 3;
+	});
+}
+```
+
+**O(n2)**
+
+```js
+function allPairs(arr) {
+	let pairs = [];
+	for (let i = 0; i < arr.length; i++) {
+		for (let j = i + 1; j < arr.length; j++) {
+			pairs.push([arr[i], arr[j]]);
+		}
+	}
+
+	return pairs;
+}
+```
+
+```js
+function bubbleSort(arr) {
+	let len = arr.length;
+	let lastSwap;
+	let temp;
+	while (len != 0) {
+		lastSwap = 0;
+		for (let i = 1; i < len; i++) {
+			if (arr[i - 1] > arr[i]) {
+				// Swap the two elements
+				temp = arr[i - 1];
+				arr[i - 1] = arr[i];
+				arr[i] = temp;
+				lastSwap = i;
+			}
+		}
+		len = lastSwap;
+	}
+}
+```
+
+It’s a helpful rule of thumb that in general, if you see nested loops, the runtime will be O(nlevels of nesting). In other words, a function with a single for loop will be O(n), a function with a loop inside of a loop will be O(n2), a function with a loop inside of a loop inside of a loop will be O(n3), and so on. However, this rule of thumb doesn’t always hold, as the following examples show:
+
+```js
+function logMultiples(n) {
+    for (let num1 = 1; num1 <= n; num1++) {
+        for (let num2 = 1; num2 <= n; num2++) {
+            console.log(num1 * num2);
+        }
+    }
+}
+
+function logSomeMultiples(n) {
+    for (let num1 = 1; num1 < n=; num1++) {
+        for (let num2 = 1; num2 <= Math.min(n, 10); num2++) {
+            console.log(num1 * num2);
+        }
+    }
+}
+```
+
+The first function, logMultiples, is O(n2). When n is 1, the function logs 1 multiple; when n is 2, the function logs 4 multiples; when n is 3, the function logs 9 multiples, and so on.
+
+What about the second function, logSomeMultiples? It might seem like this function should be O(n2) as well, because of the inner loop. However, the runtime of the inner loop is not proportional to n! The inner loop will run a maximum of 10 times, so it is actually an O(1) operation. This means that the outer loop, which is still O(n), performs an O(1) operation for each value of num1. Therefore, logSomeMultiples is itself O(n), not O(n2).
