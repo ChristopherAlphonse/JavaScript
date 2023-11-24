@@ -8,7 +8,7 @@
 //   const set1 = new Set(items1);
 //   const set2 = new Set(items2);
 
-//   if (set1.size !== set2.size) {
+//   if (set1.size !==d set2.size) {
 //     return false;
 //   }
 
