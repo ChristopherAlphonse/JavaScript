@@ -7,19 +7,19 @@
  : Eloquent JS page 38
 */
 
-function FizzBuzz() {
-	for (let i = 1; i <= 100; i++) {
-		if (i % 5 == 0 && i % 3 == 0) {
-			console.log('FizzBuzz' + i);
-		} else if (i % 3 == 0) {
-			console.log('Fizz' + i);
-		} else if (i % 5 == 0 && i % 3 != 0) {
-			console.log('Buzz' + i);
-		}
-	}
-	return 0;
+function FizzBuzz(n) {
+  for (let i = 1; i <= n; i++) {
+    if (i % 5 == 0 && i % 3 == 0) {
+      console.log("FizzBuzz" + i);
+    } else if (i % 3 == 0) {
+      console.log("Fizz" + i);
+    } else if (i % 5 == 0 && i % 3 != 0) {
+      console.log("Buzz" + i);
+    }
+  }
+  return 0;
 }
 
-FizzBuzz();
+FizzBuzz(10);
 
 // Time: O(n), space: O(1)
