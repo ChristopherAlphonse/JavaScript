@@ -1,12 +1,23 @@
-// Write a loop that run seven times and return a triangle : Eloquent JS page 37
+/*
+Write a loop that makes seven calls to console.log to output the following triangle:
+
+#
+##
+###
+####
+#####
+######
+#######
+
+*/
 
 function loopTriangle(n) {
-	let result = '';
-	for (let i = 0; i < n; i++) {
-		result += '#';
-		console.log(result);
-	}
-	return result;
+  let result = "";
+  for (let i = 1; i < n; i++) {
+    result += "#";
+    console.log(result);
+  }
+  return result;
 }
 
 console.log(loopTriangle(7));
