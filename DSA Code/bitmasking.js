@@ -1,8 +1,8 @@
 function bitMasking() {
-	let mask = 0x0f; //15
-	let value = 0x55; //85
+  let mask = 0x0f; //15
+  let value = 0x55; //85
 
-	return value & mask;
+  return value & mask;
 }
 
 console.log(bitMasking());
