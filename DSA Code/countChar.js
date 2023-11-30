@@ -14,7 +14,7 @@ function countChar(n, t) {
   return countBs(n, t);
 }
 
-console.log(countBs("BBC"));
+console.log(countBs("00010001000101010101011010"));
 // → 2
 console.log(countChar("kakkerlak", "kk"));
 // → 4
