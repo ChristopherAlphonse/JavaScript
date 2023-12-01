@@ -1,9 +1,10 @@
-const numArray = [1, 6, 453, 75, 7, 55, 775, 5, 67, 56, 56, 24, 3456, 7678, 54];
+let letters = ["a", "b", "c", "d", "e", "f", "g"];
+letters = new Array(letters);
 
-const fnCompare = (a, b) => {
-  return a - b;
-};
+let count = 0;
 
-numArray.sort(fnCompare);
-
-console.log(numArray);
+while (letters[count] != "g") {
+  count++;
+  console.log(count);
+  break;
+}
