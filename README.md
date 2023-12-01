@@ -7,6 +7,16 @@ Topics:
 3. [Problem Solving](./Topics/problem%20solving.md)
 4. [Algo Patterns](./Topics/patterns.md)
 
+<hr/>
+
+Books:
+
+1. [Learning JavaScript DSA Second Edition](./Book%20pdf/Learning-JavaScript-Data-Structures-and-Algorithms-Second-Edition.pdf)
+2. [Eloquent JavaScript](./Book%20pdf/Eloquent_JavaScript.pdf)
+3. [DSA With JavaScript](./Book%20pdf/Data-Structures-&-Algorithms-with-JavaScript.pdf)
+4. [DSA](./Book%20pdf/Data-Structure-and-Algorithms.pdf)
+5. [A Common Sense Guide To DSA](./Book%20pdf/A-Common-Sense-Guide-to-Data-Structures-and-Algorithms-Level-Up-Your-Core-Programming-Skills.pdf)
+
 We say that an algorithm is **O(fn(n))** if, for sufficiently large values of **n**, the number of simple operations the computer has to perform is bounded above by a constant times **fn(n)**.
 
 - **fn(n)** could be linear if it's a constant multiple of **n** (e.g., **fn(n) = n**).
@@ -81,23 +91,23 @@ Space complexity analysis is crucial for understanding memory usage as input siz
 
 ```js
 function add(num1, num2, num3) {
-	return num1 + num2 + num3;
+  return num1 + num2 + num3;
 }
 ```
 
 ```js
 function sayHello() {
-	for (let i = 0; i < 100; i++) {
-		console.log('Hello');
-	}
+  for (let i = 0; i < 100; i++) {
+    console.log("Hello");
+  }
 }
 ```
 
 ```js
 function logMultiples(num) {
-	for (let i = 0; i < 10; i++) {
-		console.log(i * num);
-	}
+  for (let i = 0; i < 10; i++) {
+    console.log(i * num);
+  }
 }
 ```
 
@@ -105,21 +115,21 @@ function logMultiples(num) {
 
 ```js
 function sayHello(numberOfTimes) {
-	for (let i = 0; i < numberOfTimes; i++) {
-		console.log('Hello');
-	}
+  for (let i = 0; i < numberOfTimes; i++) {
+    console.log("Hello");
+  }
 }
 ```
 
 ```js
 function doubleThenTriple(numbers) {
-	let doubled = numbers.map(function (num) {
-		return num * 2;
-	});
+  let doubled = numbers.map(function (num) {
+    return num * 2;
+  });
 
-	return doubled.map(function (num) {
-		return num * 3;
-	});
+  return doubled.map(function (num) {
+    return num * 3;
+  });
 }
 ```
 
@@ -127,35 +137,35 @@ function doubleThenTriple(numbers) {
 
 ```js
 function allPairs(arr) {
-	let pairs = [];
-	for (let i = 0; i < arr.length; i++) {
-		for (let j = i + 1; j < arr.length; j++) {
-			pairs.push([arr[i], arr[j]]);
-		}
-	}
+  let pairs = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      pairs.push([arr[i], arr[j]]);
+    }
+  }
 
-	return pairs;
+  return pairs;
 }
 ```
 
 ```js
 function bubbleSort(arr) {
-	let len = arr.length;
-	let lastSwap;
-	let temp;
-	while (len != 0) {
-		lastSwap = 0;
-		for (let i = 1; i < len; i++) {
-			if (arr[i - 1] > arr[i]) {
-				// Swap the two elements
-				temp = arr[i - 1];
-				arr[i - 1] = arr[i];
-				arr[i] = temp;
-				lastSwap = i;
-			}
-		}
-		len = lastSwap;
-	}
+  let len = arr.length;
+  let lastSwap;
+  let temp;
+  while (len != 0) {
+    lastSwap = 0;
+    for (let i = 1; i < len; i++) {
+      if (arr[i - 1] > arr[i]) {
+        // Swap the two elements
+        temp = arr[i - 1];
+        arr[i - 1] = arr[i];
+        arr[i] = temp;
+        lastSwap = i;
+      }
+    }
+    len = lastSwap;
+  }
 }
 ```
 
