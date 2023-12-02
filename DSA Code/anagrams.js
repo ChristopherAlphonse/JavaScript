@@ -1,34 +1,32 @@
-// 0(n^2)
+function validAnagram(items1, items2) {
+  if (items1.length !== items2.length) {
+    return false;
+  }
 
-// function validAnagram(items1, items2) {
-//   if (items1.length !== items2.length) {
-//     return false;
-//   }
+  const count = {};
 
-//   const set1 = new Set(items1);
-//   const set2 = new Set(items2);
+  for (const char of items1) {
+    count[char] = (count[char] || 0) + 1;
+  }
 
-//   if (set1.size !==d set2.size) {
-//     return false;
-//   }
+  for (const char of items2) {
+    if (!count[char]) {
+      return false;
+    }
+    count[char]--;
+  }
 
-//   for (const item of set1) {
-//     const count1 = [...items1].filter((el) => el === item).length;
-//     const count2 = [...items2].filter((el) => el === item).length;
+  return true;
+}
 
-//     if (count1 !== count2) {
-//       return false;
-//     }
-//   }
-
-//   return true;
-// }
-
+// Test cases
 console.log(validAnagram("", "")); // true
 console.log(validAnagram("aaz", "zza")); // false
 console.log(validAnagram("anagram", "nagaram")); // true
-console.log(validAnagram("rat", "car")); // false) // false
+console.log(validAnagram("rat", "car")); // false
 console.log(validAnagram("awesome", "awesom")); // false
 console.log(validAnagram("amanaplanacanalpanama", "acanalmanplanpamana")); // false
 console.log(validAnagram("qwerty", "qeywrt")); // true
 console.log(validAnagram("texttwisttime", "timetwisttext")); // true
+
+// Time 0(n) and Space 0(1)

@@ -20,6 +20,6 @@ function fibonacci(n) {
   return fib[n];
 }
 
-console.log(fibonacci(1));
-console.log(yourself.fibonacci(1));
+console.log(fibonacci(10));
+
 // console.log(fibonacci(10));

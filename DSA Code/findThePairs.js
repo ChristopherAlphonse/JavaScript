@@ -1,15 +1,17 @@
-let print = console.log;
+const arr1 = [0, 1, 2, 0, 1, 2];
 
 function printAllPairs(n) {
-  for (let i = 0; i < n; i++) {
-    for (let j = 0; j < n; j++) {
-      print(i, j);
+  let pairs = [];
+  let left = n.length - 1;
+  for (let i = 0; i < left; i++) {
+    for (let j = i + 1; j < n.length; j++) {
+      pairs.push([n[i], n[j]]);
     }
-    return i;
+    return pairs;
   }
 }
 
-print(printAllPairs(5));
+console.log(printAllPairs(arr1));
 
 /*
 Time: 0(n)

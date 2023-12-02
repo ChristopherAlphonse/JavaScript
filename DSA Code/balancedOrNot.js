@@ -36,3 +36,5 @@ let maxReplacements = [0, 1, 2];
 const result = balancedOrNot(expressions, maxReplacements);
 
 console.log(result);
+
+// Time 0(n * m) and Space 0(n)
