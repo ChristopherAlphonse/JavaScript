@@ -5,6 +5,6 @@
   "main": "test.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon ./test.js"
+    "dev": "nodemon ./Linked List/linkedList.js"
   }
 }
