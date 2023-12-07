@@ -1,8 +1,8 @@
 # Arrays
 
 ```javascript
-let names = ['albert', 'beatrice', 'chris'];
-let values = [true, 2, [], {}, 'string'];
+let names = ["albert", "beatrice", "chris"];
+let values = [true, 2, [], {}, "string"];
 ```
 
 ## When to Use Arrays
@@ -30,7 +30,7 @@ Creating an array with n elements typically has a space complexity of O(n), wher
 
 - Inserting an element at the end using `.push()` usually does not require additional space, except when the underlying array needs to be resized.
 
-### Removal: Big O (Depends on Position)
+### Deletion: Big O (Depends on Position)
 
 **Time Complexity:** O(n)
 
@@ -54,10 +54,12 @@ Searching for an element in an array may require iterating through the array, re
 
 - Removing an element at the end using `.pop()` typically does not increase the space requirement.
 
+### Appending: O(1)
+
 ## Big O of Array Operations
 
-- push O(1)
-- pop O(1)
+- push() O(1)
+- pop() O(1)
 - shift O(n)
 - unshift O(n)
 - concat O(n)
