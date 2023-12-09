@@ -6,6 +6,7 @@ function sumZero(arr) {
 
   while (left < right) {
     let sum = arr[left] + arr[right];
+    console.log(sum);
     if (sum === 0) {
       return [arr[left], arr[right]];
     } else if (sum > 0) {

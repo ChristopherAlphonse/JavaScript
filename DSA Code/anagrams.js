@@ -1,32 +1,34 @@
-function validAnagram(items1, items2) {
-  if (items1.length !== items2.length) {
-    return false;
+/*
+Given two strings, write a function to find out if the target is an anagram
+ */
+
+function validAnagram(n, target) {
+  if (n.length !== target.length) return false;
+
+  let storeValues = {};
+
+  for (let items of n) {
+    storeValues[items] = (storeValues[items] || 0) + 1;
   }
 
-  const count = {};
-
-  for (const char of items1) {
-    count[char] = (count[char] || 0) + 1;
-  }
-
-  for (const char of items2) {
-    if (!count[char]) {
+  for (let index of target) {
+    if (!storeValues[index]) {
       return false;
     }
-    count[char]--;
+    storeValues[index]--;
   }
 
   return true;
 }
 
 // Test cases
-console.log(validAnagram("", "")); // true
+// console.log(validAnagram("", "")); // true
 console.log(validAnagram("aaz", "zza")); // false
-console.log(validAnagram("anagram", "nagaram")); // true
-console.log(validAnagram("rat", "car")); // false
-console.log(validAnagram("awesome", "awesom")); // false
-console.log(validAnagram("amanaplanacanalpanama", "acanalmanplanpamana")); // false
-console.log(validAnagram("qwerty", "qeywrt")); // true
-console.log(validAnagram("texttwisttime", "timetwisttext")); // true
+// console.log(validAnagram("anagram", "nagaram")); // true
+// console.log(validAnagram("rat", "car")); // false
+// console.log(validAnagram("awesome", "awesom")); // false
+// console.log(validAnagram("amanaplanacanalpanama", "acanalmanplanpamana")); // false
+// console.log(validAnagram("qwerty", "qeywrt")); // true
+// console.log(validAnagram("texttwisttime", "timetwisttext")); // true
 
 // Time 0(n) and Space 0(1)
