@@ -28,7 +28,7 @@ function main() {
 
   let startTime = performance.now();
 
-  console.log(binarySearch(arr, 1));
+  console.log(binarySearch(arr, 4));
 
   let endTime = performance.now();
 

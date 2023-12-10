@@ -18,18 +18,18 @@ _**Divide and Conquer**_: Breaks down a problem into smaller sub-problems until 
 
 ```sh
 
-function binarySearch(arr, target) {
-    let left = 0;
-    let right = arr.length - 1;
+function binarySearch(arr, x) {
+    let l = 0;
+    let r = arr.length - 1;
 
-    while (left <= right) {
-        let mid = Math.floor((left + right) / 2);
-        if (arr[mid] === target) {
-            return mid;
-        } else if (arr[mid] < target) {
-            left = mid + 1;
+    while (l <= r) {
+        let m = Math.floor((l + r) / 2);
+        if (arr[m] === x) {
+            return m;
+        } else if (arr[m] < x) {
+            l = m + 1;
         } else {
-            right = mid - 1;
+            r = m - 1;
         }
     }
     return -1;
