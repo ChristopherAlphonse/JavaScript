@@ -47,8 +47,7 @@ function findMin(nums) {
   let right = nums.length - 1;
 
   while (left < right) {
-    let mid = Math.floor(right + left) / 2;
-    //  console.log(mid);
+    let mid = Math.floor((left + right) / 2);
     if (nums[right] < nums[mid]) {
       left = mid + 1;
     } else {
