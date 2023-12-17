@@ -61,7 +61,7 @@ body {
   margin-bottom: 15px;
 }
 
-.game-box h4 b {
+.game-box b {
   font-weight: 600;
 }
 
@@ -85,7 +85,7 @@ body {
   cursor: pointer;
   outline: none;
   border: none;
-  background: #0062ff;
+  background: #f200f2;
   border: 4px;
 }
 
@@ -93,6 +93,11 @@ body {
   text-transform: uppercase;
   padding: 7px;
   width: calc(100% / 9 - 5px);
+}
+
+.keyboard button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 :where(.game-modal, .keyboard) button:hover {
