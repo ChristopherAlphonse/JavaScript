@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #4a77f4;
+}
+.container {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 60em;
+  padding: 5em 2em;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+}
+
+.sword {
+  cursor: url("sword.png"), auto;
+}
