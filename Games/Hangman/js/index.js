@@ -4,11 +4,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const guessText = document.querySelector(".guesses-text b");
   const hangManImg = document.querySelector(".hangman-box img");
   const gameModal = document.querySelector(".game-modal");
+  const resetGame = document.querySelector(".reset");
 
-  let currentWord,
-    correctWord = [],
-    wrongCount = 0;
+  let currentWord, correctWord, wrongCount;
   let maxGuess = 6;
+
+  function reset() {
+    correctWord = [];
+    wrongCount = 0;
+
+    hangManImg.src = `images/hangman-${wrongCount}.svg`;
+    guessText.innerHTML = `${wrongCount} / ${maxGuess}`;
+    keyBoard
+      .querySelectorAll("button")
+      .forEach((btn) => (btn.disabled = false));
+    wordDisplay.innerHTML = currentWord
+      .split("")
+      .map(() => `<li class="letter"></li>`)
+      .join("");
+    gameModal.classList.remove("show");
+  }
 
   function fetchRandomWord() {
     const { word, hint } =
@@ -19,14 +34,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelector(".hint-text b").innerHTML = hint;
 
-    wordDisplay.innerHTML = word
-      .split("")
-      .map(() => `<li class="letter"></li>`)
-      .join("");
+    reset();
   }
 
   function GameOver(isWinner) {
-    setTimeout(() => {}, 300);
+    setTimeout(() => {
+      const modalText = isWinner
+        ? `You found the word:`
+        : ` The correct word was : `;
+      gameModal.querySelector("img").src = `./images/${
+        isWinner ? "victory" : "lost"
+      }.gif`;
+      gameModal.querySelector("h4").innerHTML = `${
+        isWinner ? "Congrats!" : "Game Over!"
+      }`;
+
+      gameModal.querySelector(
+        "p"
+      ).innerHTML = `${modalText}<b>${currentWord.toUpperCase()}</b>`;
+
+      gameModal.classList.add("show");
+    }, 300);
   }
 
   function initGame(button, clickKey) {
@@ -68,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   fetchRandomWord();
+  resetGame.addEventListener("click", fetchRandomWord);
 
   // console.log("index.js is running");
 });
