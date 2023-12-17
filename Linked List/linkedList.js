@@ -38,14 +38,10 @@ class LinkedList {
 }
 
 // Example usage:
-const linkedList = new LinkedList();
+const names = new LinkedList();
 
-linkedList.append(1);
-linkedList.append(2);
-linkedList.append(3);
+names.append("Chris");
+names.append("christopher");
+names.append("christian");
 
-linkedList.print();
-
-
-
-
+names.print(names);

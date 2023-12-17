@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whac a Mole</title>
+    <link rel="stylesheet" href="mole.css" />
+    <script src="mole.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="font-sans bg-gray-100">
+    <h1 class="text-3xl font-bold text-center mt-8">Whac a Mole</h1>
+    <h2 id="score" class="text-2xl font-semibold text-center my-4">0</h2>
+    <div
+      id="board"
+      class="grid grid-cols-3 gap-2.5 p-2.5 max-w-screen-md mx-auto"
+    ></div>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background: url("./img/mario-bg.jpg");
+      }
+
+      #board {
+        /* width: 540px; */
+        height: 540px;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        background: url("./img/soil.png");
+        background-size: cover;
+        border: 3px solid white;
+        border-radius: 25px;
+      }
+
+      #board div {
+        /* board = 540 x 540, divide into 3x3 tiles --> 180 x 180 per div */
+        width: 180px;
+        height: 180px;
+        background-image: url("./img/pipe.png");
+        background-size: cover;
+      }
+
+      #board div img {
+        /* all img tags inside tiles */
+        width: 100px;
+        height: 100px;
+
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+      }
+    </style>
+    <script src="./index.js"></script>
+  </body>
+</html>
