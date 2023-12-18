@@ -6,17 +6,24 @@ let tiles = Number(9);
 
 window.onload = function () {
   setGame();
+  disableClick();
 };
+
+function disableClick() {
+  document.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+  });
+}
 
 function setGame() {
   for (let i = 0; i < tiles; i++) {
     let gameTile = document.createElement("div");
-    gameTile.id = i.toString();
+    gameTile.id = String(i);
     gameTile.addEventListener("click", selectTile);
     document.getElementById("board").appendChild(gameTile);
   }
-  setInterval(setMole, 1000);
-  setInterval(setPlant, 1500);
+  setInterval(setMole, 600);
+  setInterval(setPlant, 700);
 }
 
 function getRandomTile() {

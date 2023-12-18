@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  disableClick();
   const keyBoard = document.querySelector(".keyboard");
   const wordDisplay = document.querySelector(".word-display");
   const guessText = document.querySelector(".guesses-text b");
@@ -6,10 +7,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const gameModal = document.querySelector(".game-modal");
   const resetGame = document.querySelector(".reset");
 
+  function disableClick() {
+    document.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+    });
+  }
+
   let currentWord, correctWord, wrongCount;
   let maxGuess = 6;
 
   function reset() {
+    disableClick();
     correctWord = [];
     wrongCount = 0;
 
@@ -69,11 +77,11 @@ document.addEventListener("DOMContentLoaded", function () {
           wordDisplay.querySelectorAll("li")[index].classList.add("guessed");
         }
       });
-      console.log(clickKey, "word found :)");
+      // console.log(clickKey, "word found :)");
     } else {
       wrongCount++;
       hangManImg.src = `images/hangman-${wrongCount}.svg`;
-      console.log(clickKey, "word NOT found :(");
+      // console.log(clickKey, "word NOT found :(");
     }
     button.disabled = true;
     guessText.innerHTML = `${wrongCount} / ${maxGuess}`;

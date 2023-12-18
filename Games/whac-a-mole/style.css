@@ -2,20 +2,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   background: url("./img/mario-bg.jpg");
-  background-size: cover;
+  background-size: initial;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 :ro0t {
   --alice-colors: #f0f8ff;
 }
 #board {
+  padding-top: 6rem;
   width: 540px;
   height: 540px;
-
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-
+  cursor: url(./favicon/favicon-32x32.png), auto;
   background: url("./img/soil.png");
   background-size: cover;
   border: 3px solid var(--alice-colors);
@@ -47,7 +52,7 @@ button {
   padding: 0.5rem 2rem;
   cursor: pointer;
   border: 0.1rem solid var(--alice-colors);
-  translate: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 button:hover {
