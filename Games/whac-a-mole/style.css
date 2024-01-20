@@ -14,7 +14,7 @@ body {
   --alice-colors: #f0f8ff;
 }
 #board {
-  padding-top: 6rem;
+  /* padding-top: 6rem; */
   width: 540px;
   height: 540px;
   margin: 0 auto;
