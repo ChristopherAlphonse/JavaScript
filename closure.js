@@ -10,7 +10,7 @@ function CreateSecret() {
 }
 
 function CreateCounter(n) {
-    let count = n;
+    let count = n ?? 0;
 
     return {
         increment: () => count++,
@@ -22,7 +22,9 @@ function CreateCounter(n) {
     };
 }
 
-const counter = CreateCounter(0);
-counter.setCount(255);
+const counter = new CreateCounter(12);
 
+for (let i = 0; i < 5; i++) {
+    counter.increment();
+}
 console.log(counter.getCount());
