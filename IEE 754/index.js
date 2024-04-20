@@ -1,6 +1,8 @@
 // Why 0.1 + 0.2 === 0.30000000000000004
 //objective: represent this formula in code : N=(-1)^Sign *1.mantissa*2(exponent -15)
 
+//The Number type is a double-precision 64-bit binary format IEEE 754 value
+
 // BITS 0  1 2 3 4 5 6   7 8 9 10 11 12 13 14 15
 // TYPE S  E E E E E E   M M M M  M  M  M  M  M
 
