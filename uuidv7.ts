@@ -1,4 +1,4 @@
-export function uuidv7(): Uint8Array {
+export function uuidv7(): string {
     // random bytes
     const value = new Uint8Array(16)
     crypto.getRandomValues(value)
@@ -17,7 +17,11 @@ export function uuidv7(): Uint8Array {
     // version
     value[6] = (value[6] & 0x0f) | 0x70
     value[8] = (value[8] & 0x3f) | 0x80
-    return value
+    const output = new Uint8Array(value)
+    const decoder = new TextDecoder()
+    const strOutput = decoder.decode(output)
+
+    return strOutput
 }
 
 const uuidValue = uuidv7()
